@@ -30,7 +30,7 @@ CREATE TABLE student (
     country VARCHAR(50),
     class_id INT,
     FOREIGN KEY (class_id)
-        REFERENCES Class (class_id),
+        REFERENCES class (class_id),
     teacher_id INT,
     FOREIGN KEY (teacher_id)
         REFERENCES teacher (teacher_id)
