@@ -4,18 +4,18 @@ USE convert_erd_to_relational_model;
 
 CREATE TABLE phieu_xuat (
     so_px INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    ngay_xuat DATE
+    ngay_xuat DATE NOT NULL
 );
 
 CREATE TABLE vat_tu (
     ma_vat_tu INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ten_vat_tu VARCHAR(255) UNIQUE
+    ten_vat_tu VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE chi_tiet_phieu_xuat (
-    don_gia_xuat LONG,
+    don_gia_xuat LONG NOT NULL,
     CHECK (don_gia_xuat > 0),
-    so_luong_xuat INT,
+    so_luong_xuat INT NOT NULL,
     CHECK (so_luong_xuat > 0),
     so_px INT NOT NULL,
     FOREIGN KEY (so_px)
@@ -28,13 +28,13 @@ CREATE TABLE chi_tiet_phieu_xuat (
 
 CREATE TABLE phieu_nhap (
     so_pn INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ngay_nhap DATE
+    ngay_nhap DATE NOT NULL
 );
 
 CREATE TABLE chi_tiet_phieu_nhap (
-    don_gia_nhap LONG,
+    don_gia_nhap LONG NOT NULL,
     CHECK (don_gia_nhap > 0),
-    so_luong_nhap INT,
+    so_luong_nhap INT NOT NULL,
     CHECK (so_luong_nhap > 0),
     ma_vat_tu INT NOT NULL,
     FOREIGN KEY (ma_vat_tu)
@@ -66,7 +66,7 @@ CREATE TABLE chi_tiet_don_dat_hang (
 
 CREATE TABLE nha_cung_cap (
     ma_ncc INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ten_ncc VARCHAR(255),
+    ten_ncc VARCHAR(255) NOT NULL,
     dia_chi VARCHAR(255)
 );
 
