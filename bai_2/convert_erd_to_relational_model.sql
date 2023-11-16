@@ -74,6 +74,6 @@ CREATE TABLE ncc_sdt (
     ma_ncc INT NOT NULL,
     FOREIGN KEY (ma_ncc)
         REFERENCES nha_cung_cap (ma_ncc),
-    sdt VARCHAR(12) NOT NULL,
+    sdt VARCHAR(12) NOT NULL UNIQUE,
     PRIMARY KEY (ma_ncc , sdt)
 );
