@@ -103,7 +103,7 @@ CREATE TABLE hop_dong (
     ngay_lam_hop_dong DATETIME NOT NULL,
     ngay_ket_thuc DATETIME NOT NULL,
     tien_dat_coc DOUBLE NOT NULL,
-    CHECK (tien_dat_coc > 0),
+    CHECK (tien_dat_coc >= 0),
     ma_nhan_vien INT NOT NULL,
     FOREIGN KEY (ma_nhan_vien)
         REFERENCES nhan_vien (ma_nhan_vien),
