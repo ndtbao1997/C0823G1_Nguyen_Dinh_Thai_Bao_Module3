@@ -25,35 +25,35 @@ VALUES(1,1,3),
 (2,3,3);
 
 SELECT 
-    order_product.o_id,
-    order_product.o_date,
-    order_product.o_total_price
+    op.o_id,
+    op.o_date,
+    op.o_total_price
 FROM
-    order_product;
+    order_product op;
     
 SELECT 
-    customer.c_name, product.p_name
+    GROUP_CONCAT(DISTINCT c.c_name) as danh_sach_khach_hang, GROUP_CONCAT(DISTINCT p.p_name) as danh_sach_san_pham
 FROM
-    ((order_product
-    JOIN customer ON order_product.c_id = customer.c_id)
-    JOIN order_detail ON order_product.o_id = order_detail.o_id
-    JOIN product ON order_detail.p_id = product.p_id);
+    (order_product op
+    JOIN customer c ON op.c_id = c.c_id
+    JOIN order_detail od ON op.o_id = od.o_id
+    JOIN product p ON od.p_id = p.p_id);
     
 SELECT 
-    customer.c_name
+    c.c_name
 FROM
-    customer
+    customer c
         LEFT JOIN
-    order_product ON customer.c_id = order_product.c_id
+    order_product op ON c.c_id = op.c_id
 WHERE
-    order_product.c_id IS NULL;
+    op.c_id IS NULL;
     
 SELECT 
-    order_product.o_id,
-    order_product.o_date,
-    SUM(product.p_price * order_detail.od_qty) AS oTotalPrice
+    op.o_id,
+    op.o_date,
+    SUM(p.p_price * od.od_qty) AS oTotalPrice
 FROM
-    ((order_product
-    JOIN order_detail ON order_product.o_id = order_detail.o_id)
-    JOIN product ON product.p_id = order_detail.p_id)
-GROUP BY order_product.o_id , order_product.o_date;
+    (order_product op
+    JOIN order_detail od ON op.o_id = od.o_id
+    JOIN product p ON p.p_id = od.p_id)
+GROUP BY op.o_id;

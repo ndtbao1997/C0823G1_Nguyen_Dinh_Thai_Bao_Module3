@@ -30,9 +30,9 @@ WHERE
 SET sql_safe_updates = 1;
 
 SELECT 
-    student.student_name, subject.sub_name, mark.mark
+    std.student_name, sub.sub_name, m.mark
 FROM
-    ((mark
-    INNER JOIN student ON mark.student_id = student.student_id)
-    INNER JOIN subject ON subject.sub_id = mark.sub_id)
+    (mark m
+    INNER JOIN student std ON m.student_id = std.student_id
+    INNER JOIN subject sub ON sub.sub_id = m.sub_id)
 ORDER BY mark DESC , student_name ASC;
