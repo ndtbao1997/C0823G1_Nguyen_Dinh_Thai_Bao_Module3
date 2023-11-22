@@ -7,7 +7,8 @@ WHERE
     nv.ho_ten LIKE 'H%'
         OR nv.ho_ten LIKE 'T%'
         OR nv.ho_ten LIKE 'K%'
-        AND CHAR_LENGTH(nv.ho_ten) <= 15; 
+        AND CHAR_LENGTH(nv.ho_ten) <= 15
+        AND is_delete = 0; 
         
 -- 3.Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 SELECT 
@@ -18,6 +19,7 @@ FROM
 WHERE
     dia_chi LIKE '%Đà Nẵng'
         OR dia_chi LIKE '%Quảng Trị'
+        AND is_delete = 0
 HAVING age BETWEEN 18 AND 50;
 
 -- 4.Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng. 
@@ -34,6 +36,7 @@ FROM
     hop_dong hd ON kh.ma_khach_hang = hd.ma_khach_hang
 WHERE
     lk.ten_loai_khach = 'Diamond'
+        AND kh.is_delete = 0
 GROUP BY kh.ma_khach_hang
 ORDER BY so_lan_dat_phong;
 
@@ -61,4 +64,6 @@ FROM
     hop_dong_chi_tiet hdct ON hdct.ma_hop_dong = hd.ma_hop_dong
         LEFT JOIN
     dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
-GROUP BY kh.ma_khach_hang, hd.ma_hop_dong , hdct.ma_hop_dong;
+WHERE
+    kh.is_delete = 0 
+GROUP BY kh.ma_khach_hang , hd.ma_hop_dong , hdct.ma_hop_dong;

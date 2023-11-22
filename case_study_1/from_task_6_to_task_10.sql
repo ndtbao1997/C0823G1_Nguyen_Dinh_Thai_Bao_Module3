@@ -14,6 +14,8 @@ FROM
     hop_dong hd ON hd.ma_dich_vu = dv.ma_dich_vu
 WHERE
     hd.ngay_lam_hop_dong > '2021-03-31'
+        AND hd.is_delete = 0
+        AND dv.is_delete = 0
 GROUP BY dv.ma_dich_vu;
 
 -- 7.Hiển thị thông tin ma_dich_vu, ten_dich_vu, dien_tich, so_nguoi_toi_da, chi_phi_thue, ten_loai_dich_vu của tất cả các loại dịch vụ đã từng được khách hàng đặt phòng 
@@ -33,12 +35,16 @@ FROM
     hop_dong hd ON hd.ma_dich_vu = dv.ma_dich_vu
 WHERE
     YEAR(ngay_lam_hop_dong) = 2020
+        AND hd.is_delete = 0
+        AND dv.is_delete = 0
         AND hd.ma_dich_vu NOT IN (SELECT 
             hd.ma_dich_vu
         FROM
             hop_dong hd
         WHERE
-            YEAR(ngay_lam_hop_dong) = 2021)
+            YEAR(ngay_lam_hop_dong) = 2021
+                AND hd.is_delete = 0
+                AND dv.is_delete = 0)
 GROUP BY dv.ma_dich_vu;
 
 -- 8.Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.
@@ -48,13 +54,17 @@ SELECT
     kh.ho_ten
 FROM
     khach_hang kh
-ORDER BY ho_ten;
+WHERE
+    is_delete = 0
+GROUP BY ho_ten;
 
 -- Cách 2:
 SELECT DISTINCT
     ho_ten
 FROM
-    khach_hang;
+    khach_hang
+WHERE
+    is_delete = 0;
     
 -- Cách 3:
 SELECT 
@@ -66,8 +76,11 @@ FROM
         ho_ten
     FROM
         khach_hang B
-    GROUP BY ho_ten) B 
-    ON A.ho_ten = B.ho_ten;
+    WHERE
+        is_delete = 0
+    GROUP BY ho_ten) B ON A.ho_ten = B.ho_ten
+WHERE
+    is_delete = 0;
     
 -- 9.Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
 SELECT 
@@ -78,10 +91,10 @@ FROM
         JOIN
     khach_hang kh ON hd.ma_khach_hang = kh.ma_khach_hang
 WHERE
-    YEAR(hd.ngay_lam_hop_dong) = 2021
+    YEAR(hd.ngay_lam_hop_dong) = 2021 and hd.is_delete = 0 and kh.is_delete = 0
 GROUP BY MONTH(hd.ngay_lam_hop_dong);
 
--- Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm. 
+-- 10. Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm. 
 -- Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem).
 SELECT 
     hd.ma_hop_dong,
@@ -93,4 +106,6 @@ FROM
     hop_dong hd
         LEFT JOIN
     hop_dong_chi_tiet hdct ON hd.ma_hop_dong = hdct.ma_hop_dong
+WHERE
+    hd.is_delete = 0 OR hdct.is_delete = 0
 GROUP BY hd.ma_hop_dong;

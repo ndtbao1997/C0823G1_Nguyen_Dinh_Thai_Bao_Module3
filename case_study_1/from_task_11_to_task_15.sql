@@ -13,6 +13,8 @@ FROM
     loai_khach lk ON lk.ma_loai_khach = kh.ma_loai_khach
 WHERE
     lk.ten_loai_khach = 'Diamond'
+        AND dvdk.is_delete = 0
+        AND hdct.is_delete = 0
         AND (kh.dia_chi LIKE '%Vinh'
         OR kh.dia_chi LIKE '%Quảng Ngãi');
         
@@ -46,7 +48,9 @@ WHERE
         FROM
             hop_dong hd
         WHERE
-            hd.ngay_lam_hop_dong LIKE '2021-06%')
+            hd.ngay_lam_hop_dong LIKE '2021-06%'
+                AND hd.is_delete = 0)
+        AND hd.is_delete = 0
 GROUP BY hd.ma_hop_dong;
 
 -- 13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
@@ -60,6 +64,8 @@ CREATE VIEW task_13_1 AS
         dich_vu_di_kem dvdk
             JOIN
         hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+    WHERE
+        hdct.is_delete = 0
     GROUP BY dvdk.ma_dich_vu_di_kem
     ORDER BY so_luong_dich_vu_di_kem DESC
     LIMIT 1;
@@ -73,6 +79,8 @@ CREATE VIEW task_13_2 AS
         dich_vu_di_kem dvdk
             JOIN
         hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+    WHERE
+        hdct.is_delete = 0
     GROUP BY dvdk.ma_dich_vu_di_kem;
     
 SELECT 
@@ -93,13 +101,13 @@ CREATE VIEW task_14 AS
         dich_vu_di_kem dvdk
             JOIN
         hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+    WHERE
+        hdct.is_delete = 0
     GROUP BY dvdk.ten_dich_vu_di_kem
     HAVING so_lan_su_dung = 1;
 
 SELECT 
-    hd.ma_hop_dong,
-    ldv.ten_loai_dich_vu,
-    t14.*
+    hd.ma_hop_dong, ldv.ten_loai_dich_vu, t14.*
 FROM
     task_14 t14
         JOIN
@@ -107,9 +115,11 @@ FROM
         JOIN
     hop_dong hd ON hd.ma_hop_dong = hdct.ma_hop_dong
         JOIN
-    dich_vu  dv ON dv.ma_dich_vu = hd.ma_dich_vu
+    dich_vu dv ON dv.ma_dich_vu = hd.ma_dich_vu
         JOIN
-    loai_dich_vu ldv ON ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu;
+    loai_dich_vu ldv ON ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
+WHERE
+    hd.is_delete = 0;
     
 -- 15.Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai, 
 -- dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
@@ -120,6 +130,8 @@ CREATE VIEW task_15 AS
         nhan_vien nv
             JOIN
         hop_dong hd ON hd.ma_nhan_vien = nv.ma_nhan_vien
+    WHERE
+        hd.is_delete = 0
     GROUP BY hd.ma_nhan_vien;
 
 SELECT 
@@ -138,4 +150,6 @@ FROM
     bo_phan bp ON bp.ma_bo_phan = nv.ma_bo_phan
         JOIN
     task_15 t15 ON t15.ma_nhan_vien = nv.ma_nhan_vien
+WHERE
+    nv.is_delete = 0
 HAVING thanh_tich <= 3;

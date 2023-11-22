@@ -33,7 +33,8 @@ CREATE TABLE nhan_vien (
         REFERENCES trinh_do (ma_trinh_do),
     ma_bo_phan INT NOT NULL,
     FOREIGN KEY (ma_bo_phan)
-        REFERENCES bo_phan (ma_bo_phan)
+        REFERENCES bo_phan (ma_bo_phan),
+    is_delete BIT(1) DEFAULT 0
 );
 
 CREATE TABLE loai_khach (
@@ -52,7 +53,8 @@ CREATE TABLE khach_hang (
     so_cmnd VARCHAR(45) NOT NULL UNIQUE,
     so_dien_thoai VARCHAR(45) NOT NULL,
     email VARCHAR(45) UNIQUE,
-    dia_chi VARCHAR(45)
+    dia_chi VARCHAR(45),
+    is_delete BIT(1) DEFAULT 0
 );
 
 CREATE TABLE loai_dich_vu (
@@ -86,7 +88,8 @@ CREATE TABLE dich_vu (
     CHECK (dien_tich_ho_boi > 30),
     so_tang INT,
     CHECK (so_tang > 0),
-    dich_vu_mien_phi_di_kem TEXT
+    dich_vu_mien_phi_di_kem TEXT,
+    is_delete BIT(1) DEFAULT 0
 );
 
 CREATE TABLE dich_vu_di_kem (
@@ -95,7 +98,8 @@ CREATE TABLE dich_vu_di_kem (
     gia DOUBLE NOT NULL,
     CHECK (gia > 0),
     don_vi VARCHAR(10) NOT NULL,
-    trang_thai VARCHAR(45) DEFAULT 'Open'
+    trang_thai VARCHAR(45) DEFAULT 'Open',
+    is_delete BIT(1) DEFAULT 0
 );
 
 CREATE TABLE hop_dong (
@@ -112,7 +116,8 @@ CREATE TABLE hop_dong (
         REFERENCES khach_hang (ma_khach_hang),
     ma_dich_vu INT NOT NULL,
     FOREIGN KEY (ma_dich_vu)
-        REFERENCES dich_vu (ma_dich_vu)
+        REFERENCES dich_vu (ma_dich_vu),
+	is_delete BIT(1) DEFAULT 0
 );
 
 CREATE TABLE hop_dong_chi_tiet (
@@ -125,5 +130,6 @@ CREATE TABLE hop_dong_chi_tiet (
         REFERENCES dich_vu_di_kem (ma_dich_vu_di_kem),
     UNIQUE (ma_hop_dong , ma_dich_vu_di_kem),
     so_luong INT NOT NULL,
-    CHECK (so_luong >= 0)
+    CHECK (so_luong >= 0),
+    is_delete BIT(1) DEFAULT 0
 );
