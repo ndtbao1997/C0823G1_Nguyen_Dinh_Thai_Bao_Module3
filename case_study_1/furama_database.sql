@@ -104,8 +104,8 @@ CREATE TABLE dich_vu_di_kem (
 
 CREATE TABLE hop_dong (
     ma_hop_dong INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    ngay_lam_hop_dong DATETIME NOT NULL,
-    ngay_ket_thuc DATETIME NOT NULL,
+    ngay_lam_hop_dong DATE NOT NULL,
+    ngay_ket_thuc DATE NOT NULL,
     tien_dat_coc DOUBLE NOT NULL,
     CHECK (tien_dat_coc >= 0),
     ma_nhan_vien INT NOT NULL,

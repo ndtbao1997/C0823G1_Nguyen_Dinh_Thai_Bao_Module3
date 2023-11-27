@@ -55,40 +55,30 @@ GROUP BY hd.ma_hop_dong;
 
 -- 13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
 -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
-CREATE VIEW task_13_1 AS
-    SELECT 
-        dvdk.ten_dich_vu_di_kem,
-        dvdk.ma_dich_vu_di_kem,
-        SUM(so_luong) AS so_luong_dich_vu_di_kem
-    FROM
-        dich_vu_di_kem dvdk
-            JOIN
-        hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
-    WHERE
-        hdct.is_delete = 0
-    GROUP BY dvdk.ma_dich_vu_di_kem
-    ORDER BY so_luong_dich_vu_di_kem DESC
-    LIMIT 1;
-    
-CREATE VIEW task_13_2 AS
-    SELECT 
-        dvdk.ten_dich_vu_di_kem,
-        dvdk.ma_dich_vu_di_kem,
-        SUM(so_luong) AS so_luong_dich_vu_di_kem
-    FROM
-        dich_vu_di_kem dvdk
-            JOIN
-        hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
-    WHERE
-        hdct.is_delete = 0
-    GROUP BY dvdk.ma_dich_vu_di_kem;
-    
 SELECT 
-    task_13_2.*
+    dvdk.ten_dich_vu_di_kem,
+    dvdk.ma_dich_vu_di_kem,
+    SUM(so_luong) AS so_luong_dich_vu_di_kem
 FROM
-    task_13_2
+    dich_vu_di_kem dvdk
         JOIN
-    task_13_1 ON task_13_2.so_luong_dich_vu_di_kem = task_13_1.so_luong_dich_vu_di_kem;
+    hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+WHERE
+    hdct.is_delete = 0
+GROUP BY dvdk.ma_dich_vu_di_kem
+HAVING so_luong_dich_vu_di_kem = (SELECT 
+        MAX(so_luong_dich_vu_di_kem)
+    FROM
+        (SELECT 
+            dvdk.ten_dich_vu_di_kem,
+                dvdk.ma_dich_vu_di_kem,
+                SUM(so_luong) AS so_luong_dich_vu_di_kem
+        FROM
+            dich_vu_di_kem dvdk
+        JOIN hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+        WHERE
+            hdct.is_delete = 0
+        GROUP BY dvdk.ma_dich_vu_di_kem) AS max_so_luong);
     
 -- 14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
 -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).

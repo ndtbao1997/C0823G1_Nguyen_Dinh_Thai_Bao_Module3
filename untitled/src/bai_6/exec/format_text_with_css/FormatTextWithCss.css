@@ -1,0 +1,14 @@
+.paragraph {
+    text-indent: 30px;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: mediumblue;
+}
+sup{
+    font-size: 10px;
+}

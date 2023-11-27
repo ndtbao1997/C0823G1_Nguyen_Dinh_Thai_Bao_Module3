@@ -1,0 +1,74 @@
+.conan-img {
+    margin-top: 30px;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    color: #ecf0f1;
+}
+
+#conan {
+    max-width: 100%;
+    display: block;
+    height: 600px;
+    margin: 0 auto;
+    border: 0.5em solid #bdc3c7;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.lista, .listb, .listc {
+    font-size: 2em;
+    margin-top: -30px;
+    line-height: 50px;
+    color: #ecf0f1;
+}
+
+.list1,.list2,.list3 {
+    width: 40%;
+    height: 300px;
+    float: left;
+    margin-left: 125px;
+}
+.accom-image{
+    height: 300px;
+    width: 40%;
+    float: right;
+    margin-right: 125px;
+}
+#imgac1{
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    border: 0.3em solid #e74c3c;
+    border-radius: 10px 10px 10px 10px;
+}
+#imgac2{
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    border: 0.3em solid #2980b9;
+    border-radius: 10px 10px 10px 10px;
+}
+#imgac3{
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    border: 0.3em solid #27ae60;
+    border-radius: 10px 10px 10px 10px;
+}
+.menu1,.menu2,.menu3{
+    height: 300px;
+    margin-bottom: 30px;
+
+}
+html{
+    background: url("Bokeh-effect.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    color: #ecf0f1;
+    text-decoration: underline;
+    text-decoration-thickness: 0.05em;
+}
