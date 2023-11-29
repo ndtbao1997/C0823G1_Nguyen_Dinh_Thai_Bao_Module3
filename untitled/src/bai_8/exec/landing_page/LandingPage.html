@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        #navbarDropdown1, #navbarDropdown2, #navbarDropdown3, #navbarDropdown4, #navbarDropdown5, #navbarDropdown6 {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        #shop-deals {
+            background: blue;
+            color: white;
+            font-size: 0.8rem;
+            width: 100%;
+            height: 70%;
+            margin-top: 7px;
+            padding: 0 3px;
+            margin-left: 5px;
+        }
+        .content{
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 30%;
+        }
+        .no-underline::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+        .no-underline:hover::after{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 table-hover">
+    <div class="container-fluid">
+        <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+             style="height: 30px" alt="">
+        <div style="margin-left: 15px; margin-right: 15px">|</div>
+        <a class="navbar-brand" href="#">Sunface</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Computers
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Computers for Business
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Accessories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Shopnow
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" id="navbarDropdown5">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Support</a>
+                </li>
+                <li>
+                    <button class="btn btn-outline-success" type="submit" id="shop-deals">SHOP DEALS</button>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <div class="nav-item dropdown collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 25px">
+                        All Microsoft
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="navbar-brand" href="#" style="font-size: 1rem; margin-right: 5px">Sunface</a>
+                    <i class="fa-solid fa-magnifying-glass" style="font-size: 0.8rem; margin-right: 25px"></i>
+                </div>
+                <div class="nav-item dropdown collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="navbar-brand" href="#" style="font-size: 1rem; margin-right: 5px">Cart</a>
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 0.8rem; margin-right: 25px"></i>
+                </div>
+                <div class="nav-item dropdown collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="navbar-brand" href="#" style="font-size: 1rem; margin-right: 5px">Sign in</a>
+                    <i class="fa-solid fa-right-to-bracket" style="font-size: 1rem; margin-right: 25px"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid bg-secondary text-black">
+    <div class="col-sm-12">
+        <div class="d-flex justify-content-end align-items-center">
+            <h6 class="position-relative" style="top: 3px; margin-right: 20px">Animation</h6>
+            <div class="position-relative" style="top: -1px; margin-right: 20px">|</div>
+            <i class="fa-solid fa-toggle-off" style="font-size: 1.2rem; margin-right: 5px"></i>
+            <p class="position-relative" style="font-size: 1.2rem;top: 5px">Off</p>
+        </div>
+    </div>
+</div>
+<div class="card p-0 m-0" style="width: 100%">
+    <div class="card-body p-0 m-0 col-sm-12">
+        <img class="col-sm-12" style="width: 100%; height: auto" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Surface_Holiday-hero-v3-color_Pro-9-laptop-mode_sapphire_Laptop-5_sage_Desktop?scl=1" alt="Ảnh">
+        <div class="content col-sm-12">
+            <h1 class="card-title">Laptops designed by Microsoft</h1>
+            <h3>Can't-miss deals are live. Save big with Cyber Week deals on Surface laptops, tablets, and 2-in-1 PCs that come equipped with Windows 11.</h3>
+            <nav class="navbar navbar-expand-lg navbar-light table-hover">
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown no-underline me-3">
+                        <a href="#" class="stretched-link" style="color: black; text-decoration: none">Surface Pro 9</a>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </li>
+                    <li class="nav-item dropdown no-underline me-3">
+                        <a href="#" class="stretched-link" style="color: black; text-decoration: none">Surface Laptop 5</a>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </li>
+                    <li class="nav-item dropdown no-underline me-3">
+                        <a href="#" class="stretched-link" style="color: black; text-decoration: none">Shop Surface deals</a>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container col-sm-12 mt-3 mb-3">
+    <nav class="navbar navbar-expand-lg text-primary table-hover" style="font-size: 1.25rem">
+        <div class="d-flex col-sm-12">
+            <ul class="navbar-nav mb-2 mb-lg-0 col-sm-12 justify-content-between">
+                <li class="nav-item dropdown no-underline me-3">
+                    <i class="fa-regular fa-building"></i>
+                    <a href="#" class="stretched-link" style="text-decoration: none">Surface for Business</a>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </li>
+                <li class="nav-item dropdown no-underline me-3">
+                    <i class="fa-solid fa-desktop"></i>
+                    <a href="#" class="stretched-link" style="text-decoration: none">Compare devices</a>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </li>
+                <li class="nav-item dropdown no-underline me-3">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <a href="#" class="stretched-link" style="text-decoration: none">Help me choose</a>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </li>
+                <li class="nav-item dropdown no-underline me-3">
+                    <i class="fa-brands fa-ideal"></i>
+                    <a href="#" class="stretched-link" style="text-decoration: none">Surface deals</a>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </li>
+                <li class="nav-item dropdown no-underline me-3">
+                    <i class="fa-solid fa-keyboard"></i>
+                    <a href="#" class="stretched-link" style="text-decoration: none">Why Surface</a>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

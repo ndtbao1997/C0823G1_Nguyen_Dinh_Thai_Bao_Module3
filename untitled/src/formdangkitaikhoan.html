@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" onclick="register()">Đăng kí tài khoản</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" onclick="login()">Đăng nhập</button>
+<div id="display"></div>
+<script>
+    function register(){
+        document.getElementById("display").innerHTML = "<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n" +
+            "    <div class=\"modal-dialog\">\n" +
+            "        <div class=\"modal-content\">\n" +
+            "            <div class=\"modal-header\">\n" +
+            "                <h5 class=\"modal-title\" id=\"exampleModalLabel\">ĐĂNG KÍ TÀI KHOẢN</h5>\n" +
+            "                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n" +
+            "            </div>\n" +
+            "            <div class=\"modal-body\">\n" +
+            "                <div class=\"container\">\n" +
+            "                    <div class=\"row justify-content-around\">\n" +
+            "                        <form action=\"\" class=\"col-md-12\">\n" +
+            "                            <div class=\"form-group\">\n" +
+            "                                <label for=\"acccountname\">Tên tài khoản</label><input type=\"text\" name=\"acccountname\"\n" +
+            "                                                                                      id=\"acccountname\"\n" +
+            "                                                                                      class=\"form-control\">\n" +
+            "                            </div>\n" +
+            "                            <div class=\"form-group\">\n" +
+            "                                <label for=\"password3\">Mật khẩu</label><input type=\"password\" name=\"password\"\n" +
+            "                                                                              id=\"password3\" class=\"form-control\">\n" +
+            "                            </div>\n" +
+            "                            <div class=\"form-group\">\n" +
+            "                                <label for=\"password4\">Xác nhận mật khẩu</label><input type=\"password\" name=\"password\"\n" +
+            "                                                                                       id=\"password4\"\n" +
+            "                                                                                       class=\"form-control\">\n" +
+            "                            </div>\n" +
+            "                        </form>\n" +
+            "                    </div>\n" +
+            "                </div>\n" +
+            "            </div>\n" +
+            "            <div class=\"modal-footer\">\n" +
+            "                <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Đóng</button>\n" +
+            "                <button type=\"button\" class=\"btn btn-primary\">Đăng kí</button>\n" +
+            "            </div>\n" +
+            "        </div>\n" +
+            "    </div>\n" +
+            "</div>";
+    }
+    function login(){
+        document.getElementById("display").innerHTML = "<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n" +
+            "    <div class=\"modal-dialog\">\n" +
+            "        <div class=\"modal-content\">\n" +
+            "            <div class=\"modal-header\">\n" +
+            "                <h5 class=\"modal-title\" id=\"exampleModalLabel\">ĐĂNG NHẬP</h5>\n" +
+            "                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n" +
+            "            </div>\n" +
+            "            <div class=\"modal-body\">\n" +
+            "                <div class=\"container\">\n" +
+            "                    <div class=\"row justify-content-around\">\n" +
+            "                        <form action=\"\" class=\"col-md-12\">\n" +
+            "                            <div class=\"form-group\">\n" +
+            "                                <label for=\"acccountname\">Tên tài khoản</label><input type=\"text\" name=\"acccountname\"\n" +
+            "                                                                                      id=\"acccountname\"\n" +
+            "                                                                                      class=\"form-control\">\n" +
+            "                            </div>\n" +
+            "                            <div class=\"form-group\">\n" +
+            "                                <label for=\"password3\">Mật khẩu</label><input type=\"password\" name=\"password\"\n" +
+            "                                                                              id=\"password3\" class=\"form-control\">\n" +
+            "                            </div>\n" +
+            "                        </form>\n" +
+            "                    </div>\n" +
+            "                </div>\n" +
+            "            </div>\n" +
+            "            <div class=\"modal-footer\">\n" +
+            "                <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Đóng</button>\n" +
+            "                <button type=\"button\" class=\"btn btn-primary\">Đăng nhập</button>\n" +
+            "            </div>\n" +
+            "        </div>\n" +
+            "    </div>\n" +
+            "</div>";
+    }
+</script>
+
+</body>
+</html>
