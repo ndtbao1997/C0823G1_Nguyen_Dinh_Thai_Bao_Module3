@@ -10,82 +10,83 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" onclick="register()">Đăng kí tài khoản</button>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" onclick="login()">Đăng nhập</button>
-<div id="display"></div>
-<script>
-    function register(){
-        document.getElementById("display").innerHTML = "<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n" +
-            "    <div class=\"modal-dialog\">\n" +
-            "        <div class=\"modal-content\">\n" +
-            "            <div class=\"modal-header\">\n" +
-            "                <h5 class=\"modal-title\" id=\"exampleModalLabel\">ĐĂNG KÍ TÀI KHOẢN</h5>\n" +
-            "                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n" +
-            "            </div>\n" +
-            "            <div class=\"modal-body\">\n" +
-            "                <div class=\"container\">\n" +
-            "                    <div class=\"row justify-content-around\">\n" +
-            "                        <form action=\"\" class=\"col-md-12\">\n" +
-            "                            <div class=\"form-group\">\n" +
-            "                                <label for=\"acccountname\">Tên tài khoản</label><input type=\"text\" name=\"acccountname\"\n" +
-            "                                                                                      id=\"acccountname\"\n" +
-            "                                                                                      class=\"form-control\">\n" +
-            "                            </div>\n" +
-            "                            <div class=\"form-group\">\n" +
-            "                                <label for=\"password3\">Mật khẩu</label><input type=\"password\" name=\"password\"\n" +
-            "                                                                              id=\"password3\" class=\"form-control\">\n" +
-            "                            </div>\n" +
-            "                            <div class=\"form-group\">\n" +
-            "                                <label for=\"password4\">Xác nhận mật khẩu</label><input type=\"password\" name=\"password\"\n" +
-            "                                                                                       id=\"password4\"\n" +
-            "                                                                                       class=\"form-control\">\n" +
-            "                            </div>\n" +
-            "                        </form>\n" +
-            "                    </div>\n" +
-            "                </div>\n" +
-            "            </div>\n" +
-            "            <div class=\"modal-footer\">\n" +
-            "                <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Đóng</button>\n" +
-            "                <button type=\"button\" class=\"btn btn-primary\">Đăng kí</button>\n" +
-            "            </div>\n" +
-            "        </div>\n" +
-            "    </div>\n" +
-            "</div>";
-    }
-    function login(){
-        document.getElementById("display").innerHTML = "<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n" +
-            "    <div class=\"modal-dialog\">\n" +
-            "        <div class=\"modal-content\">\n" +
-            "            <div class=\"modal-header\">\n" +
-            "                <h5 class=\"modal-title\" id=\"exampleModalLabel\">ĐĂNG NHẬP</h5>\n" +
-            "                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n" +
-            "            </div>\n" +
-            "            <div class=\"modal-body\">\n" +
-            "                <div class=\"container\">\n" +
-            "                    <div class=\"row justify-content-around\">\n" +
-            "                        <form action=\"\" class=\"col-md-12\">\n" +
-            "                            <div class=\"form-group\">\n" +
-            "                                <label for=\"acccountname\">Tên tài khoản</label><input type=\"text\" name=\"acccountname\"\n" +
-            "                                                                                      id=\"acccountname\"\n" +
-            "                                                                                      class=\"form-control\">\n" +
-            "                            </div>\n" +
-            "                            <div class=\"form-group\">\n" +
-            "                                <label for=\"password3\">Mật khẩu</label><input type=\"password\" name=\"password\"\n" +
-            "                                                                              id=\"password3\" class=\"form-control\">\n" +
-            "                            </div>\n" +
-            "                        </form>\n" +
-            "                    </div>\n" +
-            "                </div>\n" +
-            "            </div>\n" +
-            "            <div class=\"modal-footer\">\n" +
-            "                <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Đóng</button>\n" +
-            "                <button type=\"button\" class=\"btn btn-primary\">Đăng nhập</button>\n" +
-            "            </div>\n" +
-            "        </div>\n" +
-            "    </div>\n" +
-            "</div>";
-    }
-</script>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo" onclick="dangky()">Đăng kí tài khoản
+</button>
+<div class="modal fade"
+     id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">\n" +
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ĐĂNG KÍ TÀI KHOẢN</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row justify-content-around">
+                        <form action="" class="col-md-12">
+                            <div class="form-group">
+                                <label for="acccountname">Tên tài khoản</label><input type="text" name="acccountname"
+                                                                                      id="acccountname"
+                                                                                      class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password3">Mật khẩu</label><input type="password" name="password"
+                                                                              id="password3" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password4">Xác nhận mật khẩu</label><input type="password" name="password"
+                                                                                       id="password4"
+                                                                                       class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Đăng kí</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+        data-bs-whatever="@fat">Đăng nhập
+</button>
+<div class="modal fade"
+     id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">\n" +
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">ĐĂNG NHẬP</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row justify-content-around">
+                        <form action="" class="col-md-12">
+                            <div class="form-group">
+                                <label for="acccountname1">Tên tài khoản</label><input type="text" name="acccountname"
+                                                                                      id="acccountname1"
+                                                                                      class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password5">Mật khẩu</label><input type="password" name="password"
+                                                                              id="password5" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>

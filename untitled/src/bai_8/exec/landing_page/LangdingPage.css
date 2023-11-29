@@ -1,0 +1,49 @@
+#navbarDropdown1, #navbarDropdown2, #navbarDropdown3, #navbarDropdown4, #navbarDropdown5, #navbarDropdown6 {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+#shop-deals {
+    background: blue;
+    color: white;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 70%;
+    margin-top: 7px;
+    padding: 0 3px;
+    margin-left: 5px;
+}
+.content{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 30%;
+}
+.no-underline::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.no-underline:hover::after{
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .content h1{
+        font-size: 1.6rem;
+    }
+    .content h3{
+        font-size: 0.8rem;
+    }
+    .content nav{
+        font-size: 0.5rem;
+    }
+    .container nav div{
+        font-size: 0.6rem;
+    }
+}
