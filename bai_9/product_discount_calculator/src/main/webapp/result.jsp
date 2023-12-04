@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Product Description: ${description} </h1>
-<h1>List Price: ${listPrice}</h1>
+<h1>Price: ${price}</h1>
 <h1>Discount Percent: ${discountPercent}</h1>
 <h1>Discount Amount: ${discountAmount}</h1>
 <h1>Discount Price: ${discountPrice}</h1>
