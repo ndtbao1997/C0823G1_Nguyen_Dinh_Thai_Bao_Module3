@@ -1,8 +1,8 @@
 package com.example.product_management.controller;
 
 import com.example.product_management.model.Product;
+import com.example.product_management.service.IProductService;
 import com.example.product_management.service.ProductService;
-import com.example.product_management.service.ProductServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @WebServlet(name = "ProductServlet",urlPatterns = "/products")
 public class ProductServlet extends HttpServlet {
-    private final ProductService productService = new ProductServiceImpl();
+    private final IProductService productService = new ProductService();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -1,20 +1,46 @@
 package com.example.product_management.service;
 
 import com.example.product_management.model.Product;
+import com.example.product_management.repository.IProductRepository;
+import com.example.product_management.repository.ProductRepository;
 
-import java.util.List;
+import java.util.*;
 
-public interface ProductService {
-    List<Product> getAll();
-    void addProduct(Product product);
-    void editProduct(int id, Product product);
-    void removeProduct(int id);
-    Product viewDetailsProduct();
-    List<Product> getProductByName();
+public class ProductService implements IProductService {
+    private final IProductRepository iProductRepository = new ProductRepository();
 
-    Product findById(int id);
+    @Override
+    public List<Product> getAll() {
+        return iProductRepository.getAll();
+    }
 
-    boolean checkId(int id);
+    @Override
+    public void addProduct(Product product) {
+        iProductRepository.addProduct(product);
+    }
 
-    List<Product> searchByName(String name);
+    @Override
+    public void editProduct(int id, Product product) {
+        iProductRepository.editProduct(id,product);
+    }
+
+    @Override
+    public void removeProduct(int id) {
+        iProductRepository.removeProduct(id);
+    }
+
+    @Override
+    public Product findById(int id) {
+        return iProductRepository.findById(id);
+    }
+
+    @Override
+    public boolean checkId(int id) {
+       return iProductRepository.checkId(id);
+    }
+
+    @Override
+    public List<Product> searchByName(String name) {
+        return iProductRepository.searchByName(name);
+    }
 }
