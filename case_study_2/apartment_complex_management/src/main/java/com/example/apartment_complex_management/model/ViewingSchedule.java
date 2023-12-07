@@ -6,22 +6,30 @@ public class ViewingSchedule {
     private String customerName;
     private String customerPhone;
     private String viewDate;
+    private String email;
+    private String status;
     private Integer isDeleted;
 
-    public ViewingSchedule(Integer id, Integer idApartment, String customerName, String customerPhone, String viewDate) {
+    public ViewingSchedule(Integer id, Integer idApartment, String customerName, String customerPhone,
+                           String viewDate, String email, String status) {
         this.id = id;
         this.idApartment = idApartment;
         this.customerName = customerName;
         this.customerPhone = customerPhone;
         this.viewDate = viewDate;
+        this.email = email;
+        this.status = status;
     }
 
-    public ViewingSchedule(Integer id, Integer idApartment, String customerName, String customerPhone, String viewDate, Integer isDeleted) {
+    public ViewingSchedule(Integer id, Integer idApartment, String customerName, String customerPhone,
+                           String viewDate, String email, String status, Integer isDeleted) {
         this.id = id;
         this.idApartment = idApartment;
         this.customerName = customerName;
         this.customerPhone = customerPhone;
         this.viewDate = viewDate;
+        this.email = email;
+        this.status = status;
         this.isDeleted = isDeleted;
     }
 
@@ -63,6 +71,22 @@ public class ViewingSchedule {
 
     public void setViewDate(String viewDate) {
         this.viewDate = viewDate;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Integer getIsDeleted() {

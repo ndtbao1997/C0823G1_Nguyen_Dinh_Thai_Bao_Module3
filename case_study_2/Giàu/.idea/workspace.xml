@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="22c002f5-03a9-4c3f-a5e3-8a12354ace39" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/aaa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/controller/ApartmentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/repository/apartment/ApartmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/repository/apartment/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/repository/apartment/IApartmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/service/ApartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/service/IApartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/animation (1).css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/facility.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/linearicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/main (1).css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/view-floor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/WEB-INF/classes/com/example/product_management/controller/ProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/WEB-INF/classes/com/example/product_management/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/WEB-INF/classes/com/example/product_management/repository/IProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/WEB-INF/classes/com/example/product_management/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/WEB-INF/classes/com/example/product_management/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/WEB-INF/classes/com/example/product_management/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/product/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.83/webapps/ROOT/product/search.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033148-can-ho-mau-an-land-complex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033148-can-ho-mau-athena-fulland.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033149-can-ho-mau-charmington-iris.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033149-can-ho-mau-cosmo-tay-ho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033152-can-ho-mau-ecolife-capital.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033152-can-ho-mau-eurowindow-river-park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033153-can-ho-mau-florence.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033153-can-ho-mau-green-bay-garden.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033154-can-ho-mau-hoang-huy-riverside.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033155-can-ho-mau-hong-ha-eco-city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033155-can-ho-mau-imperia-sky-garden.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033156-can-ho-mau-iris-garden.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033156-can-ho-mau-lovera-garden.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033156-can-ho-mau-mizuki-park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033157-can-ho-mau-one-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585033157-can-ho-mau-safira-khang-dien.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585041897-can-ho-mau-sunshine-city-sai-gon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585041897-can-ho-mau-sunshine-garden.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585041898-can-ho-mau-the-grand-manhattan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1585041898-can-ho-mau-the-k-park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/model/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/java/com/example/apartment_complex_management/model/Apartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apartment_complex_management/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quyền/Main (1).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quyền/animation (1).css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quyền/main (1).css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2Z9WwVMHcgY7DeTxB914qWpXn3b" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/C0823G1_Nguyen_Dinh_Thai_Bao_Module1/module_3/case_study_2/Giàu",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22c002f5-03a9-4c3f-a5e3-8a12354ace39" name="Changes" comment="" />
+      <created>1701835014146</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701835014146</updated>
+      <workItem from="1701835015171" duration="7653000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

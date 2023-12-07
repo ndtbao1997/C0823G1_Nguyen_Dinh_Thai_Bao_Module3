@@ -94,7 +94,9 @@ ma_can_ho int not null,
 foreign key(ma_can_ho) references can_ho(ma_can_ho),
 ten_khach_hang varchar(45) not null,
 so_dien_thoai varchar(45) not null,
-ngay_xem_can_ho date not null,
+email varchar(45) not null,
+ngay_xem_can_ho date,
+tinh_trang varchar(45),
 is_delete bit(1) default 0
 );
 

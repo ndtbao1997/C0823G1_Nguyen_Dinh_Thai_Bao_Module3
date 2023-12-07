@@ -10,10 +10,12 @@ public class Apartment {
     private Integer idRentalType;
     private Integer idApartmentType;
     private Integer idFloors;
+    private String image;
+    private String status;
     private Integer isDeleted;
 
-    public Apartment(Integer id, String name, Double acreage, Double rentalCosts, Integer maxPeople,
-                     String description, Integer idRentalType, Integer idApartmentType, Integer idFloors, Integer isDeleted) {
+    public Apartment(Integer id, String name, Double acreage, Double rentalCosts, Integer maxPeople, String description,
+                     Integer idRentalType, Integer idApartmentType, Integer idFloors, String image, String status, Integer isDeleted) {
         this.id = id;
         this.name = name;
         this.acreage = acreage;
@@ -23,11 +25,13 @@ public class Apartment {
         this.idRentalType = idRentalType;
         this.idApartmentType = idApartmentType;
         this.idFloors = idFloors;
+        this.image = image;
+        this.status = status;
         this.isDeleted = isDeleted;
     }
 
-    public Apartment(Integer id, String name, Double acreage, Double rentalCosts, Integer maxPeople,
-                     String description, Integer idRentalType, Integer idApartmentType, Integer idFloors) {
+    public Apartment(Integer id, String name, Double acreage, Double rentalCosts, Integer maxPeople, String description,
+                     Integer idRentalType, Integer idApartmentType, Integer idFloors, String image, String status) {
         this.id = id;
         this.name = name;
         this.acreage = acreage;
@@ -37,6 +41,8 @@ public class Apartment {
         this.idRentalType = idRentalType;
         this.idApartmentType = idApartmentType;
         this.idFloors = idFloors;
+        this.image = image;
+        this.status = status;
     }
 
     public Integer getId() {
@@ -109,6 +115,22 @@ public class Apartment {
 
     public void setIdFloors(Integer idFloors) {
         this.idFloors = idFloors;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Integer getIsDeleted() {
