@@ -45,6 +45,29 @@ public class Apartment {
         this.status = status;
     }
 
+    public Apartment(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Apartment(Integer id, String name, Double rentalCosts) {
+        this.id = id;
+        this.name = name;
+        this.rentalCosts = rentalCosts;
+    }
+
+    public Apartment(int id,String name, Double acreage, Double rentalCosts, Integer maxPeople, Integer idRentalType, Integer idApartmentType, Integer idFloors, String status) {
+        this.id = id;
+        this.name = name;
+        this.acreage = acreage;
+        this.rentalCosts = rentalCosts;
+        this.maxPeople = maxPeople;
+        this.idRentalType = idRentalType;
+        this.idApartmentType = idApartmentType;
+        this.idFloors = idFloors;
+        this.status = status;
+    }
+
     public Integer getId() {
         return id;
     }

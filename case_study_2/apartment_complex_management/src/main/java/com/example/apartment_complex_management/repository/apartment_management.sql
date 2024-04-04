@@ -114,3 +114,4 @@ foreign key(ma_nhan_vien) references nhan_vien(ma_nhan_vien),
 foreign key(ma_can_ho) references can_ho(ma_can_ho),
 is_delete bit(1) default 0
 );
+

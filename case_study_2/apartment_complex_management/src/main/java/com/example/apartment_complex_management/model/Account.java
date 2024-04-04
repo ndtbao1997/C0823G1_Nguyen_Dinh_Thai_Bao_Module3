@@ -5,7 +5,7 @@ public class Account {
     private String accountName;
     private String password;
     private Integer idAccountType;
-    private Integer isDeleted = 0;
+    private Integer isDeleted;
 
     public Account(Integer id, String accountName, String password, Integer idAccountType, Integer isDeleted) {
         this.id = id;

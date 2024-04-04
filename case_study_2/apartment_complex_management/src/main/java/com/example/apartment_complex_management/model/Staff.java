@@ -45,6 +45,44 @@ public class Staff {
         this.isDeleted = isDeleted;
     }
 
+    public Staff(String name, String dateOfBirth, Integer gender, String numberCMND, Double wage, String numberPhone, String email, String address, Integer idWorkingParts, Integer idAccount, Integer isDeleted) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.numberCMND = numberCMND;
+        this.wage = wage;
+        this.numberPhone = numberPhone;
+        this.email = email;
+        this.address = address;
+        this.idWorkingParts = idWorkingParts;
+        this.idAccount = idAccount;
+        this.isDeleted = isDeleted;
+    }
+
+    public Staff(String name, String dateOfBirth, Integer gender, String numberCMND, Double wage, String numberPhone, String email, String address, Integer idWorkingParts, Integer idAccount) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.numberCMND = numberCMND;
+        this.wage = wage;
+        this.numberPhone = numberPhone;
+        this.email = email;
+        this.address = address;
+        this.idWorkingParts = idWorkingParts;
+        this.idAccount = idAccount;
+    }
+
+    public Staff(Integer id, String name, String numberCMND) {
+        this.id = id;
+        this.name = name;
+        this.numberCMND = numberCMND;
+    }
+
+    public Staff(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Integer getId() {
         return id;
     }

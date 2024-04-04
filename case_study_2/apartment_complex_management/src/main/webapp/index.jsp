@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello Apartment</title>
-  <link rel="stylesheet" href="main%20(1).css">
-  <link rel="stylesheet" href="animation%20(1).css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="styleTC.css">
+  <link rel="stylesheet" href="css/main%20(1).css">
+  <link rel="stylesheet" href="css/animation%20(1).css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/styleTC.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -63,8 +63,7 @@
   </style>
 </head>
 <body>
-<jsp:include page="header.jsp" />
-
+<jsp:include page="apartment/header.jsp" />
 <div style="margin-bottom: 100px">
   <div id="carouselExampleFade" class="carousel slide carousel-fade custom-carousel" data-bs-ride="carousel">
     <div class="carousel-inner" data-bs-interval="1000">
@@ -92,29 +91,32 @@
       <h2 style="margin-bottom: 30px; text-align: center">SỨ MỆNH APARTMENT BUSINESS</h2>
       <div class="row">
         <div class="col-md-6">
-          <ul>
-            <li>
-              ➡️ Hỗ trợ - kết nối các khách hàng đang có nhu cầu tìm kiếm: Căn hộ, phòng chung cư, văn
-              phòng,
-              nhà nguyên căn và mặt bằng kinh doanh: NHANH - GIÁ TỐT- CHẤT LƯỢNG.
-            </li>
-            <li>
-              ➡️ Là người bạn tri kỷ với các CĐT có tài sản cần khai thác. Haviland sẽ giúp các CĐT an tâm
-              trong việc vận hành tài sản với phương châm: TIẾT KIỆM THỜI GIAN - AN TÂM LỢI NHUẬN - SỨC
-              KHỎE
-              VỮNG BỀN!
-            </li>
-            <li>
-              ➡️ Trách nhiệm Công đồng xã hội:
-              <ul>
-                <li>Góp phần xây dựng các mô hình cư trú văn minh, hiện đại và đảm bảo an ninh.</li>
-                <li>Tạo ra giá trị dòng tiền với các mô hình kinh doanh BĐS, tiến tới thành lập hệ sinh
-                  thái
-                  mua bán BĐS dòng tiền.
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <table>
+            <tr>
+              <td style="padding-top: 0;vertical-align: top;font-size: 1.2em">
+                ➡️
+              </td>
+              <td style="width: 500px; text-align: justify;font-size: 1.2em">
+                Hỗ trợ - kết nối các khách hàng đang có nhu cầu tìm kiếm: Căn hộ, phòng chung cư, văn phòng, nhà nguyên căn và mặt bằng kinh doanh: NHANH - GIÁ TỐT- CHẤT LƯỢNG.
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 0;vertical-align: top;font-size: 1.2em">
+                ➡️
+              </td>
+              <td style="width: 500px; text-align: justify;font-size: 1.2em">
+                Là người bạn tri kỷ với các CĐT có tài sản cần khai thác. Haviland sẽ giúp các CĐT an tâm trong việc vận hành tài sản với phương châm: TIẾT KIỆM THỜI GIAN - AN TÂM LỢI NHUẬN - SỨC KHỎE VỮNG BỀN!
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 0;vertical-align: top;font-size: 1.2em">
+                ➡️
+              </td>
+              <td style="width: 500px; text-align: justify;font-size: 1.2em">
+                Trách nhiệm Công đồng xã hội: góp phần xây dựng các mô hình cư trú văn minh, hiện đại và đảm bảo an ninh. Tạo ra giá trị dòng tiền với các mô hình kinh doanh BĐS, tiến tới thành lập hệ sinh thái mua bán BĐS dòng tiền.
+              </td>
+            </tr>
+          </table>
         </div>
         <div class="col-md-6">
           <img src="https://marketingtoancau.com/files/common/cach-thuc-de-mot-thuong-hieu-co-tam-nhin-su-menh-887c2.jpg" alt="IMG" class="img-fluid">
@@ -138,6 +140,6 @@
     <img src="https://th.bing.com/th/id/OIP.UXn4OYinWONRx5C3pu_lIAHaE8?rs=1&pid=ImgDetMain" alt="IMG" class="w-100">
   </div>
 </div>
-<jsp:include page="footer.jsp" />
+<jsp:include page="apartment/footer.jsp" />
 </body>
 </html>

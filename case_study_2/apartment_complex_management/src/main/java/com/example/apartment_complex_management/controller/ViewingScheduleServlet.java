@@ -42,37 +42,44 @@ public class ViewingScheduleServlet extends HttpServlet {
         String name = req.getParameter("name");
         String phone = req.getParameter("phone");
         String email = req.getParameter("email");
-        boolean validate = CustomerExample.validateName(name) && CustomerExample.validatePhone(phone) &&
-                CustomerExample.validateEmail(email) && (!iViewingScheduleService.checkCustomerPhone(phone));
-        String message1;
-        String message2;
-        String message3;
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("input-view-schedule.jsp");
-        if (validate) {
-            String result;
-            if ((!iViewingScheduleService.checkViewSchedule(id))) {
-                iViewingScheduleService.insertViewSchedule(id, name, phone, email);
+        String date = req.getParameter("date");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("apartment/input-view-schedule.jsp");
+        String message4;
+        if (CustomerExample.validateDate(date)) {
+            String[] arrDate = date.split("/");
+            String newDate = arrDate[2] + "-" + arrDate[1] + "-" + arrDate[0];
+            boolean validate = CustomerExample.validateName(name) && CustomerExample.validatePhone(phone) &&
+                    CustomerExample.validateEmail(email) && (!iViewingScheduleService.checkCustomerPhone(phone));
+            String message1;
+            String message2;
+            String message3;
+
+
+            if (validate) {
+                String result;
+                iViewingScheduleService.insertViewSchedule(id, name, phone, email, newDate);
                 result = "Bạn đã đặt lịch xem thành công!\n" +
                         "Hãy chờ phản hồi từ chúng tôi!\n" +
                         "Trân trọng cám ơn";
                 req.setAttribute("result", result);
             } else {
-                result = "Hiện tại bạn không thể đặt lịch xem cho căn hộ này nữa! Chúng tôi rất tiếc! Xin vui lòng";
-                req.setAttribute("result", result);
+                if (!CustomerExample.validateName(name)) {
+                    message1 = "Họ và tên của bạn không đúng định dạng. Xin mời nhập lại";
+                    req.setAttribute("message1", message1);
+                }
+                if ((!CustomerExample.validatePhone(phone)) || iViewingScheduleService.checkCustomerPhone(phone)) {
+                    message2 = "Số điện thoại của bạn không đúng định dạng hoặc bạn sử dụng rồi. Xin mời nhập lại";
+                    req.setAttribute("message2", message2);
+                }
+                if (!CustomerExample.validateEmail(email)) {
+                    message3 = "Email của bạn không đúng định dạng. Xin mời nhập lại";
+                    req.setAttribute("message3", message3);
+                }
+
             }
         } else {
-            if (!CustomerExample.validateName(name)) {
-                message1 = "Họ và tên của bạn không đúng định dạng. Xin mời nhập lại";
-                req.setAttribute("message1", message1);
-            }
-            if ((!CustomerExample.validatePhone(phone)) || iViewingScheduleService.checkCustomerPhone(phone)) {
-                message2 = "Số điện thoại của bạn không đúng định dạng hoặc bạn sử dụng rồi. Xin mời nhập lại";
-                req.setAttribute("message2", message2);
-            }
-            if (!CustomerExample.validateEmail(email)) {
-                message3 = "Email của bạn không đúng định dạng. Xin mời nhập lại";
-                req.setAttribute("message3", message3);
-            }
+            message4 = "Ngày xem phải sau ngày hôm nay! Xin mời bạn đặt lại!";
+            req.setAttribute("message4", message4);
         }
         requestDispatcher.forward(req, resp);
     }
@@ -91,7 +98,7 @@ public class ViewingScheduleServlet extends HttpServlet {
     }
 
     private void showInputViewScheduleFrom(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("input-view-schedule.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("apartment/input-view-schedule.jsp");
         requestDispatcher.forward(req, resp);
     }
 }

@@ -26,6 +26,18 @@ public class Customer {
         this.isDeleted = isDeleted;
     }
 
+    public Customer(String name, String dateOfBirth, Integer gender, String numberCMND, String numberPhone, String email, String address, Integer idAccount, Integer isDeleted) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.numberCMND = numberCMND;
+        this.numberPhone = numberPhone;
+        this.email = email;
+        this.address = address;
+        this.idAccount = idAccount;
+        this.isDeleted = isDeleted;
+    }
+
     public Customer(Integer id, String name, String dateOfBirth, Integer gender, String numberCMND,
                     String numberPhone, String email, String address, Integer idAccount) {
         this.id = id;
@@ -37,6 +49,17 @@ public class Customer {
         this.email = email;
         this.address = address;
         this.idAccount = idAccount;
+    }
+
+    public Customer(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Customer(Integer id, String name, String numberCMND) {
+        this.id = id;
+        this.name = name;
+        this.numberCMND = numberCMND;
     }
 
     public Integer getId() {
